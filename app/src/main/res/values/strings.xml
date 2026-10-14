@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Quản lý chi tiêu</string>
+    <string name="login_title">Quản lý chi tiêu</string>
+    <string name="login_subtitle">Đăng nhập để tiếp tục</string>
+    <string name="username_label">Tên đăng nhập</string>
+    <string name="username_hint">Nhập tên đăng nhập</string>
+    <string name="password_label">Mật khẩu</string>
+    <string name="password_hint">••••••</string>
+    <string name="btn_login">Đăng nhập</string>
+    <string name="sample_account_hint">Tài khoản mẫu: admin / 123456</string>
+    <string name="error_empty_credentials">Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!</string>
+    <string name="error_wrong_credentials">Sai tên đăng nhập hoặc mật khẩu</string>
+
+    <string name="total_expense_title">Tổng số tiền đã chi</string>
+    <string name="expense_list_title">Danh sách khoản chi</string>
+    <string name="btn_add_expense">+ Thêm khoản chi</string>
+    <string name="tap_to_view_detail">(nhấn vào một khoản chi để xem chi tiết)</string>
+
+    <string name="add_expense_title">Thêm khoản chi</string>
+    <string name="expense_name_label">Tên khoản chi</string>
+    <string name="expense_name_hint">Ví dụ: Ăn trưa</string>
+    <string name="expense_amount_label">Số tiền (VNĐ)</string>
+    <string name="expense_amount_hint">Chỉ nhập số, ví dụ: 45000</string>
+    <string name="expense_category_label">Danh mục</string>
+    <string name="expense_date_label">Ngày chi tiêu</string>
+    <string name="expense_note_label">Ghi chú</string>
+    <string name="expense_note_hint">Nhập ghi chú (nhiều dòng)...</string>
+    <string name="btn_save_expense">Lưu khoản chi</string>
+
+    <string name="detail_expense_title">Chi tiết khoản chi</string>
+    <string name="btn_back">Quay lại</string>
+    <string name="btn_delete_expense">Xóa khoản chi</string>
+    <string name="confirm_delete_title">Xác nhận xóa</string>
+    <string name="confirm_delete_message">Bạn có chắc chắn muốn xóa khoản chi này không?</string>
+    <string name="btn_delete">Xóa</string>
+    <string name="btn_cancel">Hủy</string>
+</resources>

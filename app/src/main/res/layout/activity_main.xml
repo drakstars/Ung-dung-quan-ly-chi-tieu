@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:orientation="vertical">
+
+    <!-- Thanh tiêu đề Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_primary"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Thân màn hình -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutBottomButton"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp">
+
+                <!-- 1. Card Tổng số tiền đã chi -->
+                <LinearLayout
+                    android:id="@+id/cardTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_total"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingTop="18dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_expense_title"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="200.000 đ"
+                        android:textColor="@color/white"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Tiêu đề: Danh sách khoản chi -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/expense_list_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- 2. Danh sách khoản chi (RecyclerView) -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvExpenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+                <!-- Text trống nếu chưa có dữ liệu -->
+                <TextView
+                    android:id="@+id/tvEmptyList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center"
+                    android:text="Chưa có khoản chi nào.\nNhấn nút bên dưới để thêm mới!"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <!-- Chú thích nhấn để xem chi tiết -->
+                <TextView
+                    android:id="@+id/tvHintDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="@string/tap_to_view_detail"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- 3. Nút Thêm khoản chi (cố định ở dưới cùng) -->
+        <FrameLayout
+            android:id="@+id/layoutBottomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background_light"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
+
+            <Button
+                android:id="@+id/btnAddExpense"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_button_primary"
+                android:text="@string/btn_add_expense"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="teal_primary">#00695C</color>
+    <color name="teal_dark">#004D40</color>
+    <color name="teal_light">#E0F2F1</color>
+    <color name="teal_accent">#00897B</color>
+
+    <color name="background_light">#F5F7F8</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="border_color">#E2E8F0</color>
+
+    <color name="text_primary">#1E293B</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="text_hint">#94A3B8</color>
+
+    <color name="money_red">#D32F2F</color>
+    <color name="money_red_light">#FFEBEE</color>
+    <color name="error_red">#D32F2F</color>
+
+    <!-- Tag colors -->
+    <color name="tag_food_bg">#E0F2F1</color>
+    <color name="tag_food_text">#00796B</color>
+    <color name="tag_transport_bg">#E0F2FE</color>
+    <color name="tag_transport_text">#0284C7</color>
+    <color name="tag_study_bg">#EDE7F6</color>
+    <color name="tag_study_text">#5E35B1</color>
+    <color name="tag_entertain_bg">#FFF3E0</color>
+    <color name="tag_entertain_text">#E65100</color>
+    <color name="tag_other_bg">#ECEFF1</color>
+    <color name="tag_other_text">#455A64</color>
+</resources>

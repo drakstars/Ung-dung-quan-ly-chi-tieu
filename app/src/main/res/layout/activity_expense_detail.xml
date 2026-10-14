@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:orientation="vertical">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_primary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="14dp">
+
+        <ImageView
+            android:id="@+id/btnBackDetail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Quay lại"
+            android:padding="8dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/detail_expense_title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Thân màn hình có thể cuộn -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp">
+
+            <!-- Card chứa thông tin chi tiết -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- 1. Tên khoản chi -->
+                <TextView
+                    android:id="@+id/tvDetailName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mua sách"
+                    android:textColor="@color/text_primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- 2. Số tiền -->
+                <TextView
+                    android:id="@+id/tvDetailAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="120.000 đ"
+                    android:textColor="@color/money_red"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <!-- Đường phân cách -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/border_color" />
+
+                <!-- 3. Danh mục -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Danh mục"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDetailCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Học tập"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Ngày chi tiêu -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Ngày chi tiêu"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDetailDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="13/10/2026"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Ghi chú -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Ghi chú"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDetailNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Sách Lập trình Android"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Khu vực 2 nút cố định ở dưới cùng -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_light"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="24dp">
+
+        <!-- 4. Nút Quay lại -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_button_outline"
+            android:text="@string/btn_back"
+            android:textAllCaps="false"
+            android:textColor="@color/teal_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- 5. Nút Xóa khoản chi -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDeleteExpense"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_button_danger"
+            android:text="@string/btn_delete_expense"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
